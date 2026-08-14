@@ -1,0 +1,48 @@
+{
+  "name": "paper-go",
+  "description": "Download a paper and its cited references, then summarize each paper's topic and strategy",
+  "version": "0.1.0",
+  "author": {
+    "name": "fengxu1996"
+  },
+  "license": "MIT",
+  "keywords": [
+    "paper",
+    "pdf",
+    "references",
+    "research",
+    "literature"
+  ],
+  "userConfig": {
+    "apiKey": {
+      "type": "string",
+      "title": "LLM API Key (optional)",
+      "description": "OpenAI-compatible API key used for AI summaries. Leave empty to use built-in extractive summaries.",
+      "required": false,
+      "sensitive": true
+    },
+    "llmBaseUrl": {
+      "type": "string",
+      "title": "LLM Base URL",
+      "description": "OpenAI-compatible API base URL, e.g. https://api.openai.com/v1",
+      "required": false,
+      "default": "https://api.openai.com/v1"
+    },
+    "llmModel": {
+      "type": "string",
+      "title": "LLM Model",
+      "description": "Model name used for AI summaries.",
+      "required": false,
+      "default": "gpt-4o-mini"
+    },
+    "maxReferences": {
+      "type": "number",
+      "title": "Max References",
+      "description": "Maximum number of cited papers to fetch and summarize.",
+      "required": false,
+      "default": 20
+    }
+  },
+  "homepage": "https://github.com/fengxu1996/plugins_aha",
+  "repository": "https://github.com/fengxu1996/plugins_aha"
+}
